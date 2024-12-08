@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #282c34;
+            padding: 10px;
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        input[type="number"], input[type="text"], input[type="password"] {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            width: 80%;
+            max-width: 300px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #step-count {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .auth-links {
+            margin-top: 10px;
+        }
+
+        .auth-links a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .auth-links a:hover {
+            text-decoration: underline;
+        }
+
+        .progress-bar-container {
+            margin-top: 20px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        .progress {
+            height: 30px;
+
+            background-color: #4CAF50;
+            width: 0%;
+        }
+    </style>
+</head>
