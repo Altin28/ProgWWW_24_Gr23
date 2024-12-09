@@ -74,4 +74,31 @@
             margin: 5px 0;
             border: 1px solid #ccc;
         }
+input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            nav {
+                font-size: 14px;
+            }
+        }
+  </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Fitness Tracker</h1>
+        <p>Track Your Fitness Progress with Us</p>
+    </header>
 
