@@ -120,6 +120,26 @@ nav {
             <p>Calories burned: <span id="calories"></span></p>
         </div>
     </div>
+ <!-- Diet Tracker Page -->
+    <div id="diet" class="container section">
+        <h2>Track Your Diet</h2>
+        <form id="dietForm">
+            <label for="food">Food item:</label>
+            <input type="text" id="food" name="food" placeholder="Enter food item" required>
+
+            <label for="caloriesFood">Calories per serving:</label>
+            <input type="number" id="caloriesFood" name="caloriesFood" required>
+
+            <label for="quantity">Quantity (servings):</label>
+            <input type="number" id="quantity" name="quantity" required>
+
+            <button type="button" onclick="calculateDietCalories()">Calculate Total Calories</button>
+        </form>
+        <div id="dietResult" class="result">
+            <p>Total calories: <span id="totalCalories"></span></p>
+        </div>
+    </div>
+
 
 
 
