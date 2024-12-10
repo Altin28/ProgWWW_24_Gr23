@@ -192,6 +192,14 @@ nav {
 
             document.getElementById('calories').textContent = calories;
         }
+ function calculateDietCalories() {
+            var caloriesFood = document.getElementById('caloriesFood').value;
+            var quantity = document.getElementById('quantity').value;
+
+            var totalCalories = (caloriesFood * quantity).toFixed(2);
+
+            document.getElementById('totalCalories').textContent = totalCalories;
+        }
 
 
 
