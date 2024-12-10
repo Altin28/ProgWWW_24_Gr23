@@ -61,6 +61,42 @@ nav {
         .section {
             display: none;
         }
+.active {
+            display: block;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .home-image {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fitness Tracker</h1>
+        <nav>
+            <a href="javascript:void(0)" onclick="showPage('home')">Home</a>
+            <a href="javascript:void(0)" onclick="showPage('activity')">Activity Tracker</a>
+            <a href="javascript:void(0)" onclick="showPage('diet')">Diet Tracker</a>
+            <a href="javascript:void(0)" onclick="showPage('sleep')">Sleep Tracker</a>
+            <a href="javascript:void(0)" onclick="showPage('water')">Water Tracker</a>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="container section active">
+        <h2>Welcome to Your Fitness Tracker!</h2>
+        <p>Track your activities, diet, sleep, and water intake to stay healthy.</p>
+        <img src="c:\Users\PC1\Documents\th (1).jpg" alt="Fitness Tracker" class="home-image">
+    </div>
 
 
 
