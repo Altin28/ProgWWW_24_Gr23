@@ -200,7 +200,16 @@ nav {
 
             document.getElementById('totalCalories').textContent = totalCalories;
         }
+function evaluateSleep() {
+            var sleepHours = document.getElementById('sleepHours').value;
+            var sleepAdvice = "Great sleep is important!";
 
+            if (sleepHours < 6) {
+                sleepAdvice = "You need more sleep!";
+            }
+
+            document.getElementById('sleepAdvice').textContent = sleepAdvice;
+        }
 
 
 
