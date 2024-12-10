@@ -139,6 +139,33 @@ nav {
             <p>Total calories: <span id="totalCalories"></span></p>
         </div>
     </div>
+ <!-- Sleep Tracker Page -->
+    <div id="sleep" class="container section">
+        <h2>Track Your Sleep</h2>
+        <form id="sleepForm">
+            <label for="sleepHours">Hours of Sleep:</label>
+            <input type="number" id="sleepHours" name="sleepHours" required>
+
+            <button type="button" onclick="evaluateSleep()">Evaluate Sleep</button>
+        </form>
+        <div id="sleepResult" class="result">
+            <p><span id="sleepAdvice"></span></p>
+        </div>
+    </div>
+
+    <!-- Water Tracker Page -->
+    <div id="water" class="container section">
+        <h2>Track Your Water Intake</h2>
+        <form id="waterForm">
+            <label for="waterIntake">Water Intake (liters):</label>
+            <input type="number" id="waterIntake" name="waterIntake" required>
+
+            <button type="button" onclick="evaluateWaterIntake()">Evaluate Water Intake</button>
+        </form>
+        <div id="waterResult" class="result">
+            <p><span id="waterAdvice"></span></p>
+        </div>
+    </div>
 
 
 
