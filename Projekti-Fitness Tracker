@@ -210,7 +210,19 @@ function evaluateSleep() {
 
             document.getElementById('sleepAdvice').textContent = sleepAdvice;
         }
+function evaluateWaterIntake() {
+            var waterIntake = document.getElementById('waterIntake').value;
+            var waterAdvice = "You're staying hydrated!";
 
+            if (waterIntake < 2) {
+                waterAdvice = "You need more water!";
+            }
+
+            document.getElementById('waterAdvice').textContent = waterAdvice;
+        }
+    </script>
+</body>
+</html>
 
 
 
