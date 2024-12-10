@@ -97,6 +97,29 @@ nav {
         <p>Track your activities, diet, sleep, and water intake to stay healthy.</p>
         <img src="c:\Users\PC1\Documents\th (1).jpg" alt="Fitness Tracker" class="home-image">
     </div>
+ <!-- Activity Tracker Page -->
+    <div id="activity" class="container section">
+        <h2>Track Your Activities</h2>
+        <form id="activityForm">
+            <label for="activity">Choose Activity:</label>
+            <select id="activitySelect" name="activity">
+                <option value="running">Running</option>
+                <option value="walking">Walking</option>
+                <option value="cycling">Cycling</option>
+            </select>
+
+            <label for="weight">Your Weight (kg):</label>
+            <input type="number" id="weight" name="weight" placeholder="Enter your weight" required>
+
+            <label for="duration">Duration (minutes):</label>
+            <input type="number" id="duration" name="duration" placeholder="Duration in minutes" required>
+
+            <button type="button" onclick="calculateCalories()">Calculate Calories Burned</button>
+        </form>
+        <div id="activityResult" class="result">
+            <p>Calories burned: <span id="calories"></span></p>
+        </div>
+    </div>
 
 
 
