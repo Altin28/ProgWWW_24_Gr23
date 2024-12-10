@@ -166,6 +166,32 @@ nav {
             <p><span id="waterAdvice"></span></p>
         </div>
     </div>
+ <script>
+        function showPage(page) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Show the requested page
+            document.getElementById(page).classList.add('active');
+        }
+
+        function calculateCalories() {
+            var weight = document.getElementById('weight').value;
+            var duration = document.getElementById('duration').value;
+            var activity = document.getElementById('activitySelect').value;
+            var calories = 0;
+
+            if (activity === 'running') {
+                calories = (weight * 0.063 * duration).toFixed(2);
+            } else if (activity === 'walking') {
+                calories = (weight * 0.035 * duration).toFixed(2);
+            } else if (activity === 'cycling') {
+                calories = (weight * 0.05 * duration).toFixed(2);
+            }
+
+            document.getElementById('calories').textContent = calories;
+        }
 
 
 
