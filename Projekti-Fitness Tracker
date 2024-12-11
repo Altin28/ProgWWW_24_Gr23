@@ -10,64 +10,94 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
 
         header {
             background-color: #333;
             color: #fff;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-nav {
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        nav {
             text-align: center;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         nav a {
             color: white;
-            padding: 10px;
+            padding: 12px 25px;
             text-decoration: none;
             margin: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            background-color: #444;
+            transition: background-color 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #555;
+            background-color: #666;
         }
 
         .container {
             width: 80%;
             margin: 0 auto;
             padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
         }
- form input, form select {
-            margin: 10px;
-            padding: 10px;
+
+        form input, form select, form button {
+            margin: 10px 0;
+            padding: 12px;
             width: 100%;
             box-sizing: border-box;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        form input[type="number"] {
+            width: 50%;
         }
 
         button {
-            padding: 10px 20px;
-            background-color: #333;
+            padding: 14px 30px;
+            background-color: #007bff;
             color: white;
             border: none;
             cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
         }
 
         button:hover {
-            background-color: #555;
+            background-color: #0056b3;
         }
 
         .section {
             display: none;
         }
-.active {
+
+        .active {
             display: block;
         }
 
         .result {
             margin-top: 20px;
             font-size: 18px;
+            font-weight: bold;
+            color: #333;
         }
 
         .home-image {
@@ -76,6 +106,17 @@ nav {
             max-width: 100%;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -94,10 +135,11 @@ nav {
     <!-- Home Page -->
     <div id="home" class="container section active">
         <h2>Welcome to Your Fitness Tracker!</h2>
-        <p>Track your activities, diet, sleep, and water intake to stay healthy.</p>
+        <p>Track your activities, diet, sleep, and water intake to stay healthy and fit.</p>
         <img src="c:\Users\PC1\Documents\th (1).jpg" alt="Fitness Tracker" class="home-image">
     </div>
- <!-- Activity Tracker Page -->
+
+    <!-- Activity Tracker Page -->
     <div id="activity" class="container section">
         <h2>Track Your Activities</h2>
         <form id="activityForm">
@@ -118,9 +160,11 @@ nav {
         </form>
         <div id="activityResult" class="result">
             <p>Calories burned: <span id="calories"></span></p>
+            <p><strong>Suggestion:</strong> Try to increase the duration to burn more calories!</p>
         </div>
     </div>
- <!-- Diet Tracker Page -->
+
+    <!-- Diet Tracker Page -->
     <div id="diet" class="container section">
         <h2>Track Your Diet</h2>
         <form id="dietForm">
@@ -137,9 +181,11 @@ nav {
         </form>
         <div id="dietResult" class="result">
             <p>Total calories: <span id="totalCalories"></span></p>
+            <p><strong>Tip:</strong> Keep your calorie intake balanced throughout the day!</p>
         </div>
     </div>
- <!-- Sleep Tracker Page -->
+
+    <!-- Sleep Tracker Page -->
     <div id="sleep" class="container section">
         <h2>Track Your Sleep</h2>
         <form id="sleepForm">
@@ -150,6 +196,7 @@ nav {
         </form>
         <div id="sleepResult" class="result">
             <p><span id="sleepAdvice"></span></p>
+            <p><strong>Tip:</strong> Aim for 7-8 hours of sleep for optimal health!</p>
         </div>
     </div>
 
@@ -164,9 +211,15 @@ nav {
         </form>
         <div id="waterResult" class="result">
             <p><span id="waterAdvice"></span></p>
+            <p><strong>Reminder:</strong> Aim for at least 2 liters of water per day!</p>
         </div>
     </div>
- <script>
+
+    <div class="footer">
+        <p>&copy; 2024 Fitness Tracker. All rights reserved.</p>
+    </div>
+
+    <script>
         function showPage(page) {
             // Hide all sections
             const sections = document.querySelectorAll('.section');
@@ -192,7 +245,8 @@ nav {
 
             document.getElementById('calories').textContent = calories;
         }
- function calculateDietCalories() {
+
+        function calculateDietCalories() {
             var caloriesFood = document.getElementById('caloriesFood').value;
             var quantity = document.getElementById('quantity').value;
 
@@ -200,7 +254,8 @@ nav {
 
             document.getElementById('totalCalories').textContent = totalCalories;
         }
-function evaluateSleep() {
+
+        function evaluateSleep() {
             var sleepHours = document.getElementById('sleepHours').value;
             var sleepAdvice = "Great sleep is important!";
 
@@ -210,7 +265,8 @@ function evaluateSleep() {
 
             document.getElementById('sleepAdvice').textContent = sleepAdvice;
         }
-function evaluateWaterIntake() {
+
+        function evaluateWaterIntake() {
             var waterIntake = document.getElementById('waterIntake').value;
             var waterAdvice = "You're staying hydrated!";
 
@@ -223,6 +279,7 @@ function evaluateWaterIntake() {
     </script>
 </body>
 </html>
+
 
 
 
